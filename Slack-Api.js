@@ -265,6 +265,7 @@ app.post('/api/slack/messages', async (req, res) => {
 // START SERVER
 // ===================================
 app.listen(PORT, () => {
-  console.log(`\n🚀 Server: http://localhost:${PORT}`);
-  console.log(`🔗 Get Token: http://localhost:${PORT}/auth-token\n`);
+  console.log(`Server: http://localhost:${PORT}`);
+  console.log(`Get Token: http://localhost:${PORT}/auth-token\n`);
 });
+
