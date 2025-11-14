@@ -52,7 +52,7 @@ app.get('/', (req, res) => {
 // ===================================
 // START OAUTH FLOW (Redirect to Slack)
 // ===================================
-app.get('/auth-token', (req, res) => {
+app.get('/api/auth-token', (req, res) => {
   const authUrl = `https://slack.com/oauth/v2/authorize?client_id=${SLACK_CONFIG.clientId}&user_scope=${USER_SCOPES}&redirect_uri=${encodeURIComponent(SLACK_CONFIG.redirectUri)}`;
   res.redirect(authUrl);
 });
@@ -268,4 +268,5 @@ app.listen(PORT, () => {
   console.log(`Server: http://localhost:${PORT}`);
   console.log(`Get Token: http://localhost:${PORT}/auth-token\n`);
 });
+
 
